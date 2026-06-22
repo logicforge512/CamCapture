@@ -1,94 +1,68 @@
-# CamPhish
-Grab cam shots from target's phone front camera or PC webcam just sending a link.
-![CamPhish](https://techchip.net/wp-content/uploads/2020/04/camphish.jpg)
+<img src="https://cdn-icons-png.flaticon.com/512/883/883746.png" hight="30" width="30"> CamCapture v4.2
 
-# What is CamPhish?
-<p>CamPhish is techniques to take cam shots of target's phone front camera or PC webcam. CamPhish Hosts a fake website on in built PHP server and uses ngrok & CloudFlare Tunnel to generate a link which we will forward to the target, which can be used on over internet. website asks for camera permission and if the target allows it, this tool grab camshots of target's device
+<p align="center">
+  <img src="https://research.checkpoint.com/wp-content/uploads/2026/03/Iranian-Cameras.png" alt="CamCapture Banner" width="700px" style="border-radius: 10px;"/>
+</p>
 
-A GPS location capture feature has been added.</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Version-4.2-brightgreen?style=for-the-badge&logo=github" alt="Version"/>
+  <img src="https://img.shields.io/badge/Platform-Linux%20%7C%20macOS%20%7C%20Windows-blue?style=for-the-badge&logo=linux" alt="Platform"/>
+  <img src="https://img.shields.io/badge/Language-Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Bash"/>
+  <img src="https://img.shields.io/badge/Server-PHP%207.4+-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP"/>
+</p>
 
-## Features
-<p>In this tool I added two automatic webpage templates for engaged target on webpage to get more picture of cam</p>
-<ul>
-  <li>Festival Wishing</li>
-  <li>Live YouTube TV</li>
-  <li>Online Meeting [Beta]</li>
-  <li>GPS Location Tracking</li>
-</ul>
-<p>A cleanup script has been added to remove all unnecessary files and logs.</p>
+---
 
-## This Tool Tested On :
-<ul>
-  <li>Kali Linux</li>
-  <li>Termux</li>
-  <li>MacOS</li>
-  <li>Ubuntu</li>
-  <li>Parrot Sec OS</li>
-  <li>Windows (WSL)</li>
-</ul>
+## 📝 Project Overview
 
-# Installing and requirements
-<p>This tool require PHP for webserver, and wget for downloading dependencies. First run following command on your terminal</p>
+**CamCapture v4.2** is a cross-platform, automated Bash script engineered for cybersecurity awareness and authorized penetration testing. It beautifully demonstrates how social engineering templates integrate with local PHP servers and automated tunneling tools (Ngrok & Cloudflare) to securely analyze target device indicators like IP addresses, camera accessibility, and precise GPS telemetry.
 
+<p align="left">
+  <img src="https://github.com/ZenCoder512/CamCapture/blob/master/img/img_02.png" alt="Cyber Security Concept" width="500px" style="border-radius: 8px;"/>
+</p>
+<p align="right">
+  <img src="https://github.com/ZenCoder512/CamCapture/blob/master/img/img_01.png" alt="Cyber Security Concept" width="500px" style="border-radius: 8px;"/>
+</p>
+
+---
+
+## ⚡ Key Features
+
+* 💻 **Cross-Platform Support:** Runs smoothly on Linux, macOS, and Windows (Git Bash/MSYS).
+* 🛡️ **Automated Tunneling:** Zero-configuration setup for Cloudflare and Ngrok.
+* 🎭 **Smart Templates:** Includes Festival Wishing, Live YouTube TV, and Online Meeting simulations.
+* 📊 **Clean Telemetry:** Logs clean IP data and precise GPS coordinates directly into organized directories.
+
+---
+
+## 🚀 Getting Started (How to Run)
+
+Follow these simple steps to deploy and test the project on your local environment:
+
+### 📥 Step 1: Clone the Repository
+Open your terminal and paste the following command to download the codebase:
+```bash
+https://github.com/ZenCoder512/CamCapture.git
 ```
-apt-get -y install php wget unzip
+### 📂 Step 2: Navigate to Directory
+Switch over to the project directory to access the main execution files:
+```bash
+cd CamCapture
 ```
-
-## Installing (Kali Linux/Termux):
-
+### ⚙️ Step 3: Launch the Interface
+Provide the execution command to spin up the script setup wizard:
 ```
-git clone https://github.com/techchipnet/CamPhish
-cd CamPhish
 bash camphish.sh
 ```
+### 🛠️ Tool Architecture
+The script initiates a secure local environment, loops a background listener, and pipes connection endpoints dynamically through secure tunnels:
 
-## Clean logs & unnecessary files :
+Local Host ➡️ 2. Port Forward Tunnel ➡️ 3. Dynamic Template Generation ➡️ 4. Telemetry Capture
 
-```
-bash cleanup.sh
-```
-<p>The cam files and saved location will also be removed.</p>
+### 🔒 Security & Privacy Analytics
+This software is strictly compiled to assist network administrators and cybersecurity researchers in evaluating human-factor vulnerabilities and endpoint reporting mechanics.
 
-## Change Log:
+### ⚠️ Disclaimer
+[!WARNING]
 
-<p><b>Version: 2.0:</b> Added GPS Location Tracking</p>
-<ul>
-  <li>Added: GPS location capturing functionality</li>
-  <li>Added: Google Maps integration for captured locations</li>
-  <li>Added: Location accuracy reporting</li>
-  <li>Added: Improved loading screen with location request</li>
-</ul>
-
-<p><b>Version: 1.9:</b> Enhanced architecture detection</p>
-<ul>
-  <li>Added: Improved architecture detection for all CPU types</li>
-  <li>Added: Better support for Apple Silicon (M1/M2/M3) Macs</li>
-  <li>Added: Automatic detection of ARM, ARM64, x86, and x86_64 architectures</li>
-  <li>Fixed: Windows compatibility improvements</li>
-  <li>Fixed: CloudFlare Tunnel download issues</li>
-</ul>
-
-<p><b>Version: 1.8:</b> Added CloudFlare Tunnel and removed Serveo</p>
-<ul>
-  <li>Added: CloudFlare Tunnel support for more reliable connections</li>
-  <li>Removed: Serveo tunnel (deprecated)</li>
-  <li>Fixed: Various code improvements and bug fixes</li>
-</ul>
-
-<p><b>Version: 1.7:</b> Fix and add support</p>
-<ul>
-  <li>fixed: termux failed to get home directory</li>
-  <li>Add support for Apple sillicon (M1/M2/M3 ARM64)</li>
-  <li>Add support for arm64 like Raspberry Pi</li>
-</ul>
-<p><b>Version: 1.6:</b> Fix ngrok direct link generate</p>
-<p><b>Version: 1.5:</b> Add new online meeting template</p>
-<p><b>Version: 1.4:</b> Ngrok authtoken update</p>
-<p><b>Version: 1.3:</b> Fix ngrok direct link</p>
-
-### Important Notice
-Unauthorized reuploading of this project is prohibited.
-
-#### For More Video subcribe <a href="http://youtube.com/techchipnet">TechChip YouTube Channel</a>
-<p>CamPhish is created to help in penetration testing and it's not responsible for any misuse or illegal purposes.</p>
-<p>CamPhish is inspired by https://github.com/thelinuxchoice/ Big thanks to @thelinuxchoice</p>
+IMPORTANT: This tool is developed strictly for educational purposes, authorized security testing, and academic research. Using this tool to target individuals without prior mutual consent is strictly prohibited. The developer assumes no liability and is not responsible for any misuse or damage caused by this program.
